@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+#20200917 add
+*.pyc
+*.swp
