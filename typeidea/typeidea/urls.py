@@ -26,12 +26,12 @@ from .custom_site import custom_site
 
 
 urlpatterns = [
-    path('', post_list),
-    path('category/<category_id>/', post_list),
-    path('tag/<tag_id>/', post_list),
-    path('post/<post_id>.html', post_detail),
-    path('links/',links),
+    path('', post_list, name='index'),
+    path('category/<category_id>/', post_list, name = 'category-list'),
+    path('tag/<tag_id>/', post_list, name = 'tag-list'),
+    path('post/<post_id>.html', post_detail, name= 'post-detail'),
+    path('links/',links, name='links'),
 
-    path('admin/', admin.site.urls),
-    path('super_admin/',custom_site.urls),
+    path('admin/', admin.site.urls, name='admin'),
+    path('super_admin/',custom_site.urls, name = 'super-admin'),
 ]
